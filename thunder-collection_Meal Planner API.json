@@ -1,0 +1,209 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Meal Planner API",
+    "collectionId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+    "dateExported": "2024-10-06T22:11:46.837Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "59c57c00-2368-4aea-a45f-7e3990cab251",
+            "name": "Users",
+            "containerId": "",
+            "created": "2024-10-06T17:05:17.905Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "b1b26064-5f58-4adb-b60e-900e93e2ad39",
+            "name": "MealPlan",
+            "containerId": "",
+            "created": "2024-10-06T17:05:51.341Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "8e02697a-3405-4242-8137-4a19506a31bf",
+            "name": "Meal",
+            "containerId": "",
+            "created": "2024-10-06T17:06:04.041Z",
+            "sortNum": 40000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "234480cd-9c6e-4714-b040-1756c6eac541",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "59c57c00-2368-4aea-a45f-7e3990cab251",
+            "name": "Register",
+            "url": "http://localhost:8080/users/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-05T23:55:07.477Z",
+            "modified": "2024-10-06T22:04:44.954Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"Meal_Planner_Test_account\",\n    \"password\": \"hashedPassword\",\n    \"preferences\": [\"NonVegetarian\",\"Vegetarian\"]\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "cb1c0de3-e9ea-4e80-8e8c-6b7d24e87e5d",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "b1b26064-5f58-4adb-b60e-900e93e2ad39",
+            "name": "Create or Update Meal Plan",
+            "url": "http://localhost:8080/mealplans",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-10-06T00:01:36.945Z",
+            "modified": "2024-10-06T22:06:47.012Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "user_id",
+                    "value": "1"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"week\": 1,\n    \"meal\": {\n        \"mealId\": 154333, \n        \"name\": \"Butter Chicken\",\n        \"diets\": [\"Gluten Free\",\"Non Vegetarian\"],\n        \"image\": \"https://img.spoonacular.com/recipes/63911-312x231.jpg\"\n    }\n}\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "545c496e-dd75-4000-b3e5-8a40e044bd31",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "8e02697a-3405-4242-8137-4a19506a31bf",
+            "name": "Meal Search",
+            "url": "http://localhost:8080/meals/search?meal=Chicken&diet=NonVegetarian",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-10-06T16:24:20.288Z",
+            "modified": "2024-10-06T20:40:13.608Z",
+            "headers": [
+                {
+                    "name": "user_id",
+                    "value": "2"
+                }
+            ],
+            "params": [
+                {
+                    "name": "meal",
+                    "value": "Chicken",
+                    "isPath": false
+                },
+                {
+                    "name": "diet",
+                    "value": "NonVegetarian",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "51a0d729-bee8-4633-92e3-e615bc3b13cc",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "59c57c00-2368-4aea-a45f-7e3990cab251",
+            "name": "User Login",
+            "url": "http://localhost:8080/users/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-10-05T23:57:32.915Z",
+            "modified": "2024-10-06T03:23:41.348Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"username\": \"anvaya_sreesha\",\n    \"password\": \"abcdf\"\n}\n\n",
+                "form": []
+            }
+        },
+        {
+            "_id": "3d2e4860-51a8-47f8-9a25-a715c2cbfc1c",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "b1b26064-5f58-4adb-b60e-900e93e2ad39",
+            "name": "Delete Meal Plan",
+            "url": "http://localhost:8080/mealplans/154333",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2024-10-06T04:58:01.788Z",
+            "modified": "2024-10-06T22:07:14.963Z",
+            "headers": [
+                {
+                    "name": "user_id",
+                    "value": "1"
+                }
+            ]
+        },
+        {
+            "_id": "8ede918d-3419-495b-8ce0-e33823020adf",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "59c57c00-2368-4aea-a45f-7e3990cab251",
+            "name": "Fetch User Details",
+            "url": "http://localhost:8080/users/2",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-05T23:59:05.176Z",
+            "modified": "2024-10-06T22:05:09.879Z",
+            "headers": [
+                {
+                    "name": "user_id",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "_id": "e9d1b1ba-923e-41f5-b277-40d6a00ac15a",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "b1b26064-5f58-4adb-b60e-900e93e2ad39",
+            "name": "Fetch All Meal Plans",
+            "url": "http://localhost:8080/mealplans",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-10-06T00:02:38.634Z",
+            "modified": "2024-10-06T22:07:28.247Z",
+            "headers": [
+                {
+                    "name": "user_id",
+                    "value": "2"
+                }
+            ]
+        },
+        {
+            "_id": "e1697d69-c7ef-4b77-81ca-c83313b3acee",
+            "colId": "d6f53cb2-9586-4ee7-a71e-b0b63e188fa6",
+            "containerId": "59c57c00-2368-4aea-a45f-7e3990cab251",
+            "name": "Update User Preferences",
+            "url": "http://localhost:8080/users/2",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-10-06T00:00:32.858Z",
+            "modified": "2024-10-06T22:05:26.481Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "user_id",
+                    "value": "2"
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n    \"preferences\": [\"NonVegetarian\",\"Gluten Free\"]\n}\n",
+                "form": []
+            }
+        }
+    ],
+    "ref": "BeZCLCr9Rozqy-h4WqIpwYjs8pHxZilcJ7yIrOcnXFFc8xQ-rb--K3gi5-6onV9jEmnDuowvsRfEbt_VHIr3cw"
+}
